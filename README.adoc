@@ -1,0 +1,25 @@
+## Create project with Spring Initializer
+
+## Add graphql-spring-boot-starters
+
+```xml
+<dependency>
+    <groupId>com.graphql-java-kickstart</groupId>
+    <artifactId>graphql-spring-boot-starter</artifactId>
+    <version>5.0.5</version>
+</dependency>
+
+<!-- to embed GraphiQL tool -->
+<dependency>
+    <groupId>com.graphql-java-kickstart</groupId>
+    <artifactId>graphiql-spring-boot-starter</artifactId>
+    <version>5.0.5</version>
+</dependency>
+
+<!-- to embed Voyager tool -->
+<dependency>
+    <groupId>com.graphql-java-kickstart</groupId>
+    <artifactId>voyager-spring-boot-starter</artifactId>
+    <version>5.0.5</version>
+</dependency>
+```

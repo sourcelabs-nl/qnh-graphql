@@ -1,0 +1,24 @@
+type Query {
+    orderById(id: Long): Order,
+    ordersByCustomerNumber(customerNumber: String): [Order]
+}
+
+type Order {
+    id: Long,
+    totalPrice: BigDecimal,
+    items: [OrderItem]
+}
+
+type OrderItem {
+    id: Long,
+    productId: String,
+    # [warning] fetching product details is very slow!
+    productDetails: Product
+}
+
+type Product {
+    id: String,
+    title: String,
+    brand: String,
+    imageUrl: String
+}
