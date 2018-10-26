@@ -28,10 +28,10 @@ class GraphQLApplication {
 
         private fun beans() = beans {
             bean { ref<RestTemplateBuilder>().additionalInterceptors(interceptor).rootUri(ref<Environment>()["wiremock.url"]).build() }
-            bean { ProductService(ref()) }
-            bean { OrderService(ref()) }
-            bean { OrderItemResolver(ref()) }
-            bean { QueryResolver(ref()) }
+            bean<ProductService>()
+            bean<OrderService>()
+            bean<OrderItemResolver>()
+            bean<QueryResolver>()
         }
 
         @JvmStatic
