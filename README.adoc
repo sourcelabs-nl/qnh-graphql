@@ -1,25 +1,15 @@
-## Create project with Spring Initializer
+## GraphQL + Spring Boot example application
 
-## Add graphql-spring-boot-starters
+This is a Spring Boot based GraphQL sample application written in Kotlin.
 
-```xml
-<dependency>
-    <groupId>com.graphql-java-kickstart</groupId>
-    <artifactId>graphql-spring-boot-starter</artifactId>
-    <version>5.0.5</version>
-</dependency>
+You can use this example to easily setup your own GraphQL application.
 
-<!-- to embed GraphiQL tool -->
-<dependency>
-    <groupId>com.graphql-java-kickstart</groupId>
-    <artifactId>graphiql-spring-boot-starter</artifactId>
-    <version>5.0.5</version>
-</dependency>
+This project consists of two (maven) modules:
 
-<!-- to embed Voyager tool -->
-<dependency>
-    <groupId>com.graphql-java-kickstart</groupId>
-    <artifactId>voyager-spring-boot-starter</artifactId>
-    <version>5.0.5</version>
-</dependency>
-```
+- stubs: containing Spring Cloud Contract files for generation of WireMock stubs
+- application: GraphQL example application written in Kotlin using GraphQL Java Tools and the `com.graphql-java-kickstart` and the provided Spring Boot started modules: `graphql-spring-boot-starter`.
+
+### Getting started with GraphQL and Spring Boot
+
+- Create project a Spring Boot project using Spring Initializer
+- Add graphql-spring-boot-starters
