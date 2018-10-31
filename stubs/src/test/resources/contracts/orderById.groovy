@@ -14,12 +14,13 @@ Contract.make {
     response {
         status 200
         body([
-                "id"   : 1,
-                "totalPrice" : 3299.99,
-                "items": [[
-                                  "id"       : 1,
-                                  "productId": "123"
-                          ]]
+                "id"        : 1,
+                "totalPrice": 3299.99,
+                "items"     : [[
+                                       "id"       : 1,
+                                       "productId": "123",
+                                       "status"   : "Shipped"
+                               ]]
         ])
         headers {
             contentType(applicationJson())

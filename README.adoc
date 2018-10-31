@@ -13,3 +13,49 @@ This project consists of two (maven) modules:
 
 - Create project a Spring Boot project using Spring Initializer
 - Add graphql-spring-boot-starters
+
+
+### Queries and mutations
+
+Example query:
+
+```
+query {
+  orderById(id: "1") {
+    totalPrice
+    items {
+      status
+      productId
+    }
+  }
+}
+```
+
+Example slow query:
+
+```
+query {
+  orderById(id: "1") {
+    totalPrice
+    items {
+      status
+      productId
+      product {
+        title
+      }
+    }
+  }
+}
+```
+
+Example mutation query:
+
+```
+mutation {
+  cancelOrderItem(orderItemCancellation: {orderId: "1", orderItemId: "1", reason: "I dont want it!"} ) {
+    id
+    status
+  }
+}
+```
+

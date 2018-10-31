@@ -1,24 +1,36 @@
 type Query {
-    orderById(id: Long): Order,
+    orderById(id: Long): Order
     ordersByCustomerNumber(customerNumber: String): [Order]
 }
 
+type Mutation {
+    cancelOrderItem(orderItemCancellation: OrderItemCancellation): OrderItem
+}
+
 type Order {
-    id: Long,
-    totalPrice: BigDecimal,
+    id: String
+    totalPrice: String
     items: [OrderItem]
 }
 
 type OrderItem {
-    id: Long,
-    productId: String,
+    id: String
+    # Item status like Shipped, Cancelled, Returned, etc.
+    status: String
+    productId: String
     # [warning] fetching product details is very slow!
-    productDetails: Product
+    product: Product
 }
 
 type Product {
-    id: String,
-    title: String,
-    brand: String,
+    id: String
+    title: String
+    brand: String
     imageUrl: String
+}
+
+input OrderItemCancellation {
+    orderId: String
+    orderItemId: String
+    reason: String
 }
