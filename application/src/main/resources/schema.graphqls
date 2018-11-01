@@ -3,6 +3,10 @@ type Query {
     ordersByCustomerNumber(customerNumber: String): [Order]
 }
 
+type Mutation {
+    cancelOrderItem(orderItemCancellation: OrderItemCancellation): OrderItem
+}
+
 type Order {
     id: String!
     totalPrice: String!
@@ -20,4 +24,10 @@ type OrderItem {
 type Product {
     title: String!
     imageUrl: String
+}
+
+input OrderItemCancellation {
+    orderId: String
+    orderItemId: String
+    reason: String
 }
