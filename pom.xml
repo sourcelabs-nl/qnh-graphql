@@ -23,6 +23,7 @@
         <kotlin.version>1.3.0</kotlin.version>
         <spring-cloud-contract.version>2.0.2.RELEASE</spring-cloud-contract.version>
         <spring-boot.version>2.0.6.RELEASE</spring-boot.version>
+        <graphql-java-kickstart.version>5.0.6</graphql-java-kickstart.version>
     </properties>
 
     <modules>
@@ -42,27 +43,34 @@
             <dependency>
                 <groupId>com.graphql-java-kickstart</groupId>
                 <artifactId>graphql-spring-boot-starter</artifactId>
-                <version>5.0.5</version>
+                <version>${graphql-java-kickstart.version}</version>
             </dependency>
 
             <!-- to embed GraphiQL tool -->
             <dependency>
                 <groupId>com.graphql-java-kickstart</groupId>
                 <artifactId>graphiql-spring-boot-starter</artifactId>
-                <version>5.0.5</version>
+                <version>${graphql-java-kickstart.version}</version>
             </dependency>
 
             <!-- to embed Voyager tool -->
             <dependency>
                 <groupId>com.graphql-java-kickstart</groupId>
                 <artifactId>voyager-spring-boot-starter</artifactId>
-                <version>5.0.5</version>
+                <version>${graphql-java-kickstart.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.antlr</groupId>
                 <artifactId>antlr4-runtime</artifactId>
                 <version>4.7.1</version>
+            </dependency>
+
+            <!-- for java 11 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.8.1</version>
             </dependency>
 
             <dependency>
